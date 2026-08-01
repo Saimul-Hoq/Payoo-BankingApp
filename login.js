@@ -16,6 +16,6 @@ loginBtn.addEventListener("click", async function() {
     }
     else{
         alert("Login Successful");
-        window.location.replace("/home.html");
+        window.location.replace("home.html");
     }
 })
