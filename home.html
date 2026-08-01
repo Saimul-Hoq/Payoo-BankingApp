@@ -39,7 +39,7 @@
             </div>
         
             <div class="navbar-end scale-90">
-                <button class="btn bg-base-100 rounded-md font-normal text-xl text-base-content/60"><i class="fa-solid fa-right-from-bracket"></i>
+                <button id="logOut-btn" class="btn bg-base-100 rounded-md font-normal text-xl text-base-content/60"><i class="fa-solid fa-right-from-bracket"></i>
  Log Out</button>
             </div>
         </div>
@@ -50,32 +50,32 @@
 
         <div class="grid grid-cols-3 gap-3 mt-5">
             <!-- Add Money Button______________________________________ -->
-            <button id="addMoney-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="addMoney-btn" data-target="#addMoney-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Add Money</p>
             </button>
             <!-- Cashout Button______________________________________ -->
-            <button id="cashout-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="cashout-btn" data-target="#cashout-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-2.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Cashout</p>
             </button>
             <!-- Transfer Button______________________________________ -->
-            <button id="transfer-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="transfer-btn" data-target="#transfer-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-3.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Transfer</p>
             </button>
             <!-- Bonus Button______________________________________ -->
-            <button id="bonus-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="bonus-btn" data-target="#bonus-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-4.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Get Bonus</p>
             </button>
             <!-- Pay Bill Button______________________________________ -->
-            <button id="payBill-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="payBill-btn" data-target="#payBill-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-5.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Pay Bill</p>
             </button>
             <!-- Transactions Button______________________________________ -->
-            <button id="transactions-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+            <button id="transactions-btn" data-target="#transactions-section" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
                 <div ><img class="mx-auto" src="./assets/opt-6.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Transactions</p>
             </button>

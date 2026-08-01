@@ -64,4 +64,4 @@ let bankValidator = function(bank) {
     }
     return true;
 };
- 
+
