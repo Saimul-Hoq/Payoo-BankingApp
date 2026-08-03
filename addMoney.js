@@ -1,3 +1,5 @@
+import { bankValidator, mobileNumberValidator, addAmountValidator, pinValidator, el_totalAmount, updateBalance, getBalance } from "./machine.js";
+
 let el_add_money_btn = document.querySelector("#add-money-btn");
 let el_user_bank = document.querySelector("#user-bank");
 let el_bank_account_number = document.querySelector("#bank-account-number");
@@ -10,7 +12,7 @@ el_add_money_btn.addEventListener("click", () => {
     let accountNumberVal = el_bank_account_number.value;
     let amountVal = el_addMoney_amount.value;
     let pinVal = el_addMoney_pin.value;
-    let totalAmountVal = Number(el_totalAmount.innerText);
+    let totalAmountVal = getBalance();
  
     if (
         bankValidator(bankVal) &&
@@ -20,8 +22,8 @@ el_add_money_btn.addEventListener("click", () => {
     ) {
         alert("Money Added Successfully");
         totalAmountVal = totalAmountVal + Number(amountVal);
-        el_totalAmount.innerText = totalAmountVal;
- 
+        // el_totalAmount.innerText = totalAmountVal;
+        updateBalance(totalAmountVal);
         el_user_bank.value = "";
         el_bank_account_number.value = "";
         el_addMoney_amount.value = "";

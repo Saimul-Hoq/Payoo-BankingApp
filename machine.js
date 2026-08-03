@@ -1,6 +1,17 @@
-let el_totalAmount = document.querySelector("#total-amount");
+export let el_totalAmount = document.querySelector("#total-amount");
+let savedBalance = localStorage.getItem("balance");
+let state = {balance: savedBalance ? Number(savedBalance) : 45000};
+el_totalAmount.innerText = state.balance;
+export let getBalance = function(){
+    return state.balance;
+}
+export let updateBalance = function(newAmount){
+    state.balance = newAmount;
+    el_totalAmount.innerText = state.balance;
+    localStorage.setItem("balance", state.balance);
+}
 
-let mobileNumberValidator = function(mobileNumber) {
+export let mobileNumberValidator = function(mobileNumber) {
     if(mobileNumber === ""){
         alert("Please enter agent number");
         return false;
@@ -14,7 +25,7 @@ let mobileNumberValidator = function(mobileNumber) {
 };
 
 // Amount validator for adding money (no balance ceiling check needed here)
-let addAmountValidator = function(str_amount) {
+export let addAmountValidator = function(str_amount) {
     if (str_amount === "") {
         alert("Please enter amount");
         return false;
@@ -27,7 +38,7 @@ let addAmountValidator = function(str_amount) {
     return true;
 };
 
-let amountValidator = function(str_amount){
+export let amountValidator = function(str_amount){
     if(str_amount === ""){
         alert("Please enter amount");
         return false;
@@ -44,7 +55,7 @@ let amountValidator = function(str_amount){
     return true;
 }
 
-let pinValidator = function(pinNumber){
+export let pinValidator = function(pinNumber){
     if(pinNumber === ""){
         alert("Please enter PIN");
         return false;
@@ -57,11 +68,12 @@ let pinValidator = function(pinNumber){
 }
 
 // Bank selection validator
-let bankValidator = function(bank) {
+export let bankValidator = function(bank) {
     if (bank === "") {
         alert("Please select a bank");
         return false;
     }
     return true;
 };
+
 

@@ -1,3 +1,5 @@
+import { el_totalAmount, updateBalance, getBalance } from "./machine.js";
+
 let el_get_bonus_btn = document.querySelector("#get-bonus-btn");
 let el_bonus = document.querySelector("#bonus");
 
@@ -18,12 +20,13 @@ let couponValidator = function(coupon) {
 
 el_get_bonus_btn.addEventListener("click", () => {
     let coupon = el_bonus.value;
-    let totalAmount = Number(el_totalAmount.innerText);
+    let totalAmount = getBalance();
 
     if (couponValidator(coupon)) {
         
         totalAmount = totalAmount + BONUS_AMOUNT;
-        el_totalAmount.innerText = totalAmount;
+        // el_totalAmount.innerText = totalAmount;
+        updateBalance(totalAmount);
         alert("Congratulations! You have received "+ BONUS_AMOUNT + "tk bonus.");
         el_bonus.value = "";
     }
